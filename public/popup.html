@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PageWhisper</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <div class="logo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+        </svg>
+        <h1>PageWhisper</h1>
+      </div>
+      <div class="version">v0.3.0</div>
+    </header>
+
+    <!-- API Key Status -->
+    <div class="api-status" id="api-status">
+      <div class="status-icon">⚠️</div>
+      <div class="status-text">Checking API key...</div>
+    </div>
+
+    <!-- Main Actions -->
+    <section class="actions">
+      <button id="select-element" class="btn btn-primary">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 3l7.07 16.97 2.51-7.39 7.39-2.51L3 3z"/>
+        </svg>
+        Select Element
+      </button>
+      <p class="hint">Click to select a component on the page</p>
+    </section>
+
+    <!-- Selected Component Preview -->
+    <section class="preview" id="preview-section" style="display: none;">
+      <h2>Selected Component</h2>
+      <div class="component-info" id="component-info">
+        <div class="info-item">
+          <span class="label">Element:</span>
+          <span class="value" id="element-type">button</span>
+        </div>
+        <div class="info-item">
+          <span class="label">Classes:</span>
+          <span class="value" id="element-classes">btn btn-primary</span>
+        </div>
+      </div>
+
+      <!-- Conversion Options -->
+      <div class="options">
+        <h3>Conversion Options</h3>
+
+        <div class="option">
+          <label for="framework">Framework:</label>
+          <select id="framework">
+            <option value="react">React</option>
+            <option value="vue">Vue 3</option>
+            <option value="angular">Angular</option>
+            <option value="svelte">Svelte</option>
+            <option value="solid">Solid</option>
+            <option value="preact">Preact</option>
+          </select>
+        </div>
+
+        <div class="option">
+          <label for="language">Language:</label>
+          <select id="language">
+            <option value="typescript" selected>TypeScript</option>
+            <option value="javascript">JavaScript</option>
+          </select>
+        </div>
+
+        <div class="option checkbox">
+          <label>
+            <input type="checkbox" id="include-styles" checked>
+            Include Styles
+          </label>
+        </div>
+
+        <div class="option checkbox">
+          <label>
+            <input type="checkbox" id="include-types" checked>
+            Include Types
+          </label>
+        </div>
+
+        <div class="option checkbox">
+          <label>
+            <input type="checkbox" id="include-tests">
+            Include Tests
+          </label>
+        </div>
+      </div>
+
+      <!-- Convert Button -->
+      <button id="convert-component" class="btn btn-success">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+        Convert Component
+      </button>
+    </section>
+
+    <!-- Loading State -->
+    <section class="loading" id="loading-section" style="display: none;">
+      <div class="spinner"></div>
+      <p id="loading-text">Converting component...</p>
+    </section>
+
+    <!-- Result Section -->
+    <section class="result" id="result-section" style="display: none;">
+      <h2>Converted Component</h2>
+      <div class="result-actions">
+        <button id="copy-code" class="btn btn-small">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+          </svg>
+          Copy Code
+        </button>
+        <button id="save-file" class="btn btn-small">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+            <polyline points="17 21 17 13 7 13 7 21"></polyline>
+            <polyline points="7 3 7 8 15 8"></polyline>
+          </svg>
+          Save File
+        </button>
+      </div>
+      <pre class="code-block" id="code-output"></pre>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <a href="https://github.com/JoseMas68/pagewhisper" target="_blank">GitHub</a>
+      <span>•</span>
+      <a href="options.html">Settings</a>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
