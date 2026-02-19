@@ -122,8 +122,8 @@ See [ROADMAP.md](ROADMAP.md) for complete sprint planning and technical roadmap.
 
 ### Current Status
 
-**Latest Version:** v0.1.0 (Core Engine MVP)
-**Status**: ✅ Sprint 1 Complete | 🔄 Sprint 2 In Planning
+**Latest Version:** v0.2.0 (AI System - In Progress)
+**Status**: ✅ Sprint 1 Complete | 🔄 Sprint 2 In Progress
 **Repository**: [github.com/JoseMas68/pagewhisper](https://github.com/JoseMas68/pagewhisper)
 
 ### Completed Sprints
@@ -147,12 +147,21 @@ See [ROADMAP.md](ROADMAP.md) for complete sprint planning and technical roadmap.
 - ✅ 85+ test suites with 80%+ coverage
 - ✅ Complete API documentation
 
+**Sprint 2**: AI System (v0.2.0) 🔄
+- ✅ AISystem orchestrator implementation
+- ✅ CacheManager with TTL and LRU eviction
+- ✅ RetryManager with exponential backoff
+- ✅ PromptVersioning system
+- ✅ OpenRouter provider integration
+- 🔄 Unit tests for AI modules (in progress)
+- ⏳ Integration tests with real API
+- ⏳ Complete AI System documentation
+
 ### Upcoming Sprints
 
-1. **Sprint 2**: AI System (v0.2.0) - Next!
-2. **Sprint 3**: Chrome Adapter (v0.3.0)
-3. **Sprint 4**: Basic UI (v0.4.0)
-4. **Sprint 5**: Integration MVP (v0.5.0) ★
+1. **Sprint 3**: Chrome Adapter (v0.3.0) - Next!
+2. **Sprint 4**: Basic UI (v0.4.0)
+3. **Sprint 5**: Integration MVP (v0.5.0) ★
 
 ## 🤝 Contributing
 
