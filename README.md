@@ -120,24 +120,39 @@ PageWhisper follows an **evolutionary architecture** supporting three stages:
 
 See [ROADMAP.md](ROADMAP.md) for complete sprint planning and technical roadmap.
 
-### Current Sprint
+### Current Status
 
-**Sprint 0**: Project Setup (v0.0.1)
+**Latest Version:** v0.1.0 (Core Engine MVP)
+**Status**: ✅ Sprint 1 Complete | 🔄 Sprint 2 In Planning
+**Repository**: [github.com/JoseMas68/pagewhisper](https://github.com/JoseMas68/pagewhisper)
+
+### Completed Sprints
+
+**Sprint 0**: Project Setup (v0.0.1) ✅
 - ✅ TypeScript configuration
 - ✅ ESLint + Prettier setup
 - ✅ Git hooks (Husky)
 - ✅ Build system (Vite)
 - ✅ Testing infrastructure
-- ⏳ CI/CD pipeline
-- ⏳ Documentation
+- ✅ CI/CD pipeline
+- ✅ Documentation
+
+**Sprint 1**: Core Engine (v0.1.0) ✅
+- ✅ DOMExtractor - Extract HTML, CSS, and metadata from DOM elements
+- ✅ DOMCleaner - Clean and optimize HTML/CSS with statistics
+- ✅ FrameworkDetector - Detect frameworks, libraries, and build tools
+- ✅ PromptBuilder - Build AI prompts with template system
+- ✅ HashGenerator - Generate deterministic hashes for caching
+- ✅ CoreEngine - Orchestrator coordinating all modules
+- ✅ 85+ test suites with 80%+ coverage
+- ✅ Complete API documentation
 
 ### Upcoming Sprints
 
-1. **Sprint 1**: Core Engine (v0.1.0)
-2. **Sprint 2**: AI System (v0.2.0)
-3. **Sprint 3**: Chrome Adapter (v0.3.0)
-4. **Sprint 4**: Basic UI (v0.4.0)
-5. **Sprint 5**: Integration MVP (v0.5.0) ★
+1. **Sprint 2**: AI System (v0.2.0) - Next!
+2. **Sprint 3**: Chrome Adapter (v0.3.0)
+3. **Sprint 4**: Basic UI (v0.4.0)
+4. **Sprint 5**: Integration MVP (v0.5.0) ★
 
 ## 🤝 Contributing
 
@@ -168,6 +183,6 @@ Built with ❤️ by the PageWhisper team.
 
 ---
 
-**Status**: 🚧 In Development (Sprint 0)
-**Version**: 0.0.1
-**Next Milestone**: v0.1.0 (Core Engine)
+**Status**: ✅ Sprint 1 Complete
+**Version**: v0.1.0 (Core Engine MVP)
+**Next Milestone**: v0.2.0 (AI System)
